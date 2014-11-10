@@ -1,0 +1,139 @@
+/* admin css */
+
+body{
+    background-color:white;
+    font-family: Arial, Verdana, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+#wrapper{
+    width:800px;
+    margin:10px auto;
+    padding:10px;
+    background-color:#fff;
+    border:2px solid #ccc;
+}
+
+h1 {
+    font-size:1.2em;
+    color:#999;
+
+}
+
+h2{
+    font-size:1em;
+    color:#999;
+}
+
+h3{
+    font-size:.9em;
+    color:#999;
+}
+
+h4{
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:.8em;
+    color:#999;
+}
+
+p,li,td{
+    font-size:.8em;
+}
+
+a,a:link{
+    color:#999;
+    text-decoration:underline;
+
+}
+a:hover{
+    color:#ccc;
+}
+
+
+
+
+#main{
+    margin-left:10px;
+    width:700px;
+    height:auto;
+
+}
+
+#header{
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+#footer{
+    clear:both;
+    padding-top:40px;
+    font-size:9px;
+}
+
+
+
+
+
+.message{
+    border:1px solid #c98c21;
+    background-color:#efdda8;
+    color:#c98c21;
+    padding:5px;
+    width:250px;
+    font-size:12px;
+    margin:5px 0px 5px 0px;
+}
+
+.floatleft{
+    float:left;
+}
+
+.floatright{
+    float:right;
+}
+
+
+
+/* navigation */
+
+#globalnav {
+    width: 750px;
+    height:30px;
+    margin: 2px 0 10px 0;
+    padding: 0;
+    background: #ccc;
+}
+
+#globalnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#globalnav li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 80%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#globalnav li a {
+    float: left;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #999;
+    border: none;
+}
+
+
+
+
+#globalnav li form{
+    padding:3px 0px;
+}
+
+
