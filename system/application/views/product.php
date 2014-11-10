@@ -1,5 +1,6 @@
 <div id = pleft>
     <?php
+    echo form_open('cart/add_cart_item');
     echo "<img src = '".base_url().$product['image']."' border = '0' align = 'left' /> \n";
     echo "<h2> ".$product['name']."</h2>\n";
     echo "<p>".$product['longdesc']."</p>\n";
@@ -13,7 +14,9 @@
         echo $sizes[$value]. "&nbsp";
     }
     //var_dump($assigned_sizes);
-    echo anchor('welcome/cart/'.$product['id'],'buy now');
+    echo form_hidden('product_id', $product['id']). "</p>\n";
+    echo form_submit('add', 'Add'). "</p>\n";
+    echo form_close();
     ?>
     <br style="clear:both"><br/>
     <?php
@@ -39,10 +42,13 @@
 <div id='pright'>
     <?php
     foreach ($grouplist as $list){
+        echo form_open('cart/add_cart_item');
         echo "<div class='productlisting'><img src='". base_url().$list['thumbnail']."' border='0' class='thumbnail'/>\n";
         echo "<h4>".$list['name']."</h4>\n";
         echo anchor('welcome/product/'.$list['id'],'see details') . "<br/>\n";
-        echo anchor('welcome/cart/'.$list['id'],'add to cart') . "\n</div>";
+        echo form_hidden('product_id', $list['id']). "</p>\n";
+        echo form_submit('add', 'Add'). "</p>\n";
+        echo form_close();
     }
     ?>
 </div>

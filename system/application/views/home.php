@@ -1,11 +1,14 @@
 <div id = 'pleft'>
     <?php
+    echo form_open('cart/add_cart_item');
     $temp = base_url().$mainf['image'];
     echo "<img src='".$temp."' border='0' align='left'/>\n";
     echo "<h2>".$mainf['name']."</h2>\n";
     echo "<p>".$mainf['shortdesc'] . "<br/>\n";
     echo anchor('welcome/product/'.$mainf['id'],'see details') . "<br/>\n";
-    echo anchor('welcome/cart/'.$mainf['id'],'add to cart') . "</p>\n";
+    echo form_hidden('product_id', $mainf['id']). "</p>\n";
+    echo form_submit('add', 'Add'). "</p>\n";
+    echo form_close();
     ?>
     <br style="clear:both"><br/>
     <?php
@@ -31,10 +34,13 @@
 <div id='pright'>
     <?php
     foreach ($sidef as $key => $list){
+        echo form_open('cart/add_cart_item');
         echo "<div class='productlisting'><img src='". base_url().$list['thumbnail']."' border='0' class='thumbnail'/>\n";
         echo "<h4>".$list['name']."</h4>\n";
         echo anchor('welcome/product/'.$list['id'],'see details') . "<br/>\n";
-        echo anchor('welcome/cart/'.$list['id'],'add to cart') . "\n</div>";
+        echo form_hidden('product_id', $list['id']). "</p>\n";
+        echo form_submit('add', 'Add'). "</p>\n";
+        echo form_close();
     }
     ?>
 </div>
