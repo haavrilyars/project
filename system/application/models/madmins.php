@@ -11,7 +11,7 @@ class MAdmins extends CI_Model{
 		$Q = $this->db->get('admins');
 		if($Q->num_rows()>0){
 			$row = $Q->row_array();
-			$_SESSION['userid'] = $row['id'];
+			$_SESSION['admin_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
 		}
         else {

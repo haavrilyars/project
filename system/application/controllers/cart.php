@@ -38,4 +38,7 @@ class Cart extends CI_Controller{
         $this->cart->destroy(); // Destroy all cart data
         redirect('cart'); // Refresh te page
     }
+    function check_out(){
+        $this->Cart_model->validate_update_cart();
+    }
 }

@@ -61,7 +61,19 @@ class Subscribers extends CI_Controller{
         if($this->input->post('subject')){
             $subject = $this->input->post('subject');
             $msg = $this->input->post('message');
+            $config = array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://smtp.gmail.com',
+                'smtp_port' => 465,
+                'smtp_user' => 'sihalala@gmail.com',
+                'smtp_pass' => 'Lovehaho93',
+                'mailtype' => 'html',
+                'newline' => "\r\n",
+                'charset' => 'iso-8859-1'
+            );
+            $this->load->library('email',$config);
             $subs = $this->MSubscribers->getAllSubscribers();
+
             foreach($subs as $list){
                 $unsub = "<p> <a href= '".base_url().'welcome/unsubscribe/'.$list['id']."'/>Unsubscribe</p>";
                 $this->email->clear();
@@ -69,8 +81,23 @@ class Subscribers extends CI_Controller{
                 $this->email->to($list['email']);
                 $this->email->subject($subject);
                 $this->email->message($msg.$unsub);
+                //echo $list['email'].$subject.$msg.$unsub;
                 $this->email->send();
             }
+
+            /*$this->email->from('sihalala@gmail.com', 'Admin AIObookstore');
+            $this->email->to("sihalala@gmail.com");
+            $this->email->subject('[AIOBookstore] Recovery your password');
+            $this->email->message('Your password is Plesase remember');
+
+            if($this->email->send()){
+                echo "Mail đã được gửi tới hòm thư điện tử của bạn";
+                echo "Vui lòng kiểm tra";
+            }
+            else
+            {
+                show_error($this->email->print_debugger());
+            }*/
             $this->session->set_flashdata('message','Emails have been sent !');
             redirect('admin/subscribers','refresh');
         }

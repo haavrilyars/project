@@ -5,6 +5,11 @@
 <?php echo anchor('welcome/pages/about_us','about us');?>
 <?php echo anchor('welcome/pages/contact','contact');?>
 <?php echo anchor('welcome/cart','cart');?>
+<?php echo anchor('welcome/register','register');?>
+<?php echo anchor('welcome/login','login');?>
+<?php if(isset($_SESSION['user_id'])){
+    echo 'hello '. anchor('welcome/customer/'.$_SESSION["user_id"],$customer['username']);
+}?>
 <?php
 echo form_open("welcome/search");
 $data = array(
