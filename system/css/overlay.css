@@ -1,0 +1,41 @@
+    .overlay{
+        background:transparent url(images/overlay.png) repeat top left;
+        position:fixed;
+        top:0px;
+        bottom:0px;
+        left:0px;
+        right:0px;
+        z-index:100;
+    }
+    .box{
+        width: 640px;
+        position:fixed;
+        left:30%;
+        background-color:#fff;
+        z-index:101;
+        padding: 10px;
+        border-radius: 0px 0px 5px 5px;
+        margin-top:60px;
+    }
+    .box h1{
+        background: #07c8b3;
+        text-shadow: #008d7e 0px 2px 0px;
+        font-size: 24px;
+        line-height: 69px;
+        color: #fff;
+        text-align: center;
+        font-weight: normal;
+        border-bottom: 1px dashed #7F7F7F;
+        margin: -20px -10px 0px -10px;
+        font-family: 'Bitter', Arial, sans-serif;
+        border-radius: 5px 5px 0px 0px;
+    }
+    a.boxclose{
+        float:right;
+        width:26px;
+        height:26px;
+        background:transparent url(images/cancel.png) repeat top left;
+        margin-top:-15px;
+        margin-right:-5px;
+        cursor:pointer;
+    }

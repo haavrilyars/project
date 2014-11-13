@@ -1,0 +1,62 @@
+    aside.preview {
+        width: 340px;
+        float: left;
+    }
+
+    .item-1 p {
+        color: #777;
+        font-family: Arial;
+    }
+
+    img#main {
+        border: 1px #ccc solid;
+        padding: 2px;
+        margin: 14px;
+    }
+    .box nav {
+        margin: 0 10px;
+    }
+
+    .box nav a.active {
+        border-color: #ECD95C;
+    }
+    .box nav a:first-child {
+        margin-left: 0;
+    }
+
+    .box nav a {
+        border: 1px #ccc solid;
+        padding: 2px 2px 0;
+        display: block;
+        float: left;
+        margin: 2px;
+        transition: all .3s ease-in-out;
+    }
+
+    .box nav a:hover {
+        transform: scale(1.1);
+    }
+
+    .item-1 input.red[type="submit"]:focus{
+        outline: none;
+    }
+
+    .item-1 .btnp input {
+        font-size: 20px;
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        width: 30%;
+        border: solid 1px #b2332d;
+        margin: 25px auto;
+        display: block;
+        border-radius: 10px;
+        background: #e14f49;
+        box-shadow: 0px 3px 0px 0px #b2332d;
+    }
+
+    .item-1 input.red[type="submit"]:hover {
+        text-shadow: #8f2722 0px 2px 0px;
+        background: #b2332d;
+        box-shadow: 0px 3px 0px 0px #8f2722;
+    }
