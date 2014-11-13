@@ -2,7 +2,7 @@
 
  body{
     background-color:white;
-    font-family: Arial, Verdana, sans-serif;
+    /*font-family: Arial, Verdana, sans-serif;*/
     margin:0;
     padding:0;
  }
@@ -38,13 +38,14 @@
  	color:#14b8b8;
  }
  
- p,li,td{
+ /*p,li,td{
  	font-size:.8em;
- }
+ }*/
  
  a,a:link{
  	color:#c98c21;
- 	text-decoration:underline;
+ 	/*text-decoration:underline;*/
+     text-decoration:none;
  
  }
  a:hover{
@@ -108,7 +109,7 @@
  }
 
  #header{
-    font-size:12px;
+    /*font-size:12px;*/
     margin-bottom:10px;
  }
  
